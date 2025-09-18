@@ -49,7 +49,7 @@ section {
   min-height: 100vh; /* each fills screen */
 }
 
-/* FIXED #home layout so text & slideshow are side by side */
+
 #home {
   display: flex;
   flex-direction: row;       /* put items side by side */
@@ -59,7 +59,7 @@ section {
   padding: 50px;
 }
 
-.home-text {
+/* .home-text {
   text-align: center;         
   height: 600px;
   width: 700px;
@@ -67,7 +67,7 @@ section {
 
 .home-text h1 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: white;
   line-height: 3;
   font-family: Georgia;
@@ -75,11 +75,39 @@ section {
 
 .home-text p {
   font-size: 20px;
-  line-height: 5;
+  line-height: 3;
   color:#93D4E3;
   font-family: Georgia;
+  margin-bottom: 15px;
+} */
+.home-text {
+ display: flex;
+  flex-direction: column; /* Stack the text and photo grid vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  gap: 40px; /* Space between the text and photo grid */
+  padding: 50px;
+  text-align: center;
+  height: 600px;
+  width: 700px;
+  background: none;
 }
 
+.home-text h1 {
+  font-size: 36px;
+  color: white;
+  font-family: Georgia, serif;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.home-text p {
+  font-size: 18px;
+  color: #93D4E3;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 #slideshow {
   width: 700px;           /* fixed width */
   height: 600px;          /* fixed height */
