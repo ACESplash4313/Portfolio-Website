@@ -4,6 +4,11 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+body.fade-out {
+  opacity: 0;
 }
 
 nav {
@@ -11,7 +16,7 @@ nav {
   justify-content: space-between;
   flex-direction: column-reverse;
   background: #111;
-  padding: 15px;
+  padding: 13px;
   text-align: right;
   /* position: sticky; */
   top: 0;
@@ -30,7 +35,7 @@ div {
 }
 
 span {
-  padding: 30px
+  padding: 45px
 }
 
 nav a {
@@ -49,10 +54,10 @@ section {
   min-height: 100vh; /* each fills screen */
 }
 
-/* FIXED #home layout so text & slideshow are side by side */
+/* Layout for home section: text & slideshow side by side */
 #home {
   display: flex;
-  flex-direction: row;       /* put items side by side */
+  flex-direction: row;       /* side by side */
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
   gap: 40px;                 /* space between text & slideshow */
@@ -60,39 +65,77 @@ section {
   background: none;
 }
 
+/* Home text block */
 .home-text {
-  text-align: center;         
-  height: 600px;
+  display: flex;
+  flex-direction: column;    /* stack text vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 100px;                 /* space between heading and paragraphs */
+  padding: 20px;
+  text-align: center;
+  height: 300px;
   width: 700px;
+  background: none;
 }
 
 .home-text h1 {
   font-size: 40px;
-  margin-bottom: 20px;
   color: white;
-  line-height: 3;
-  font-family: Georgia;
+  font-family: Georgia, serif;
+  margin-bottom: 20px;
+  line-height: .5;
 }
 
 .home-text p {
-  font-size: 20px;
-  line-height: 5;
-  color:#93D4E3;
-  font-family: Georgia;
+  font-size: 30px;
+  color: #93D4E3;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+#about {
+  display: flex;
+  /* flex-direction: row;       side by side */
+  /* justify-content: center;   center horizontally */
+  align-items: center;       
+  gap: 40px;                 /* space between text & slideshow */
+  padding: 50px;
+  background: none;
+}
+.about-text {
+  background: none;       /* removes black box */
+  padding: 20px;          /* optional breathing room */
+  max-width: 600px;
+  margin: 0 auto;         /* centers it horizontally */
+  text-align: center;     /* keeps text centered */
 }
 
+.about-text p {
+  font-size: 20px;
+  color: white;
+  font-family: Georgia, serif;
+  line-height: 3;         /* spreads lines out more */
+  margin-bottom: 25px;    /* extra space between paragraphs */
+}
+
+.about-text h1{
+font-size: 40px;
+line-height: .7;
+}
+/* Slideshow styles */
 #slideshow {
-  width: 700px;           /* fixed width */
-  height: 600px;          /* fixed height */
+  width: 700px;
+  height: 600px;
   position: relative;
-  overflow: hidden;       /* hide anything outside the box */
-  border-radius: 10px;    /* optional, looks nicer */
+  overflow: hidden;
+  border-radius: 10px; /* optional rounded corners */
 }
 
 #slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* fills the box without stretching */
+  object-fit: cover;  /* fills box without stretching */
   position: absolute;
   top: 0;
   left: 0;
